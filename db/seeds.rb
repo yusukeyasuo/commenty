@@ -26,3 +26,8 @@ ProductReview.create(:product_id => 1 , :review => '2個購入して、届いて
 2度目のメールを送ってから1週間以上経ちましたが未だにメールの返事無し。
 iFaceって保証が付いてるから保証を使う事だって出来るはずなのに返事が無ければこちらはどうしようもありません。
 一体このキズ入りのiFaceどうしたら良いのでしょう？', :star_count => 1.0 , :score => 67 )
+
+
+(2..5).ench do |no|
+  Product.create(:name => "タイトル #{no}")
+end
