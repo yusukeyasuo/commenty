@@ -9,6 +9,7 @@
 
 # coding: utf-8
 
+=begin
 
 Product.create(:name => 'iFace Reflection iPhone8/7 ケース クリア 強化ガラス [ベージュ]', :price => 3456 , :star_count => 4.0 ,:url => 'https://www.amazon.co.jp/iFace-Reflection-iPhone8-%E5%BC%B7%E5%8C%96%E3%82%AC%E3%83%A9%E3%82%B9-%E3%83%99%E3%83%BC%E3%82%B8%E3%83%A5/dp/B07NDHFF78/ref=sr_1_1?qid=1559304499&refinements=p_n_feature_eleven_browse-bin%3A2519089051&s=electronics&sr=1-1' )
 
@@ -28,6 +29,110 @@ iFaceって保証が付いてるから保証を使う事だって出来るはず
 一体このキズ入りのiFaceどうしたら良いのでしょう？', :star_count => 1.0 , :score => 67 )
 
 
-(2..5).ench do |no|
-  Product.create(:name => "タイトル #{no}")
+
+
+
+(2..5).each do |no|
+  Product.create!(:name => "タイトル #{no}")
 end
+
+
+
+=end
+
+
+
+[
+  {
+    id: 1,
+    name: 'iFace Reflection iPhone8/7 ケース クリア 強化ガラス',
+    price: 3456,
+    star_count: 4.0,
+    url: 'https://www.amazon.co.jp/iFace-Reflection-iPhone8-%E5%BC%B7%E5%8C%96%E3%82%AC%E3%83%A9%E3%82%B9-%E3%83%99%E3%83%BC%E3%82%B8%E3%83%A5/dp/B07NDHFF78/ref=sr_1_1?qid=1559304499&refinements=p_n_feature_eleven_browse-bin%3A2519089051&s=electronics&sr=1-1',
+  },
+  {
+    id: 2,
+    name: 'iFace Reflection iPhone8/7 ケース クリア 強化ガラス',
+    price: 3456,
+    star_count: 4.0,
+    url: 'https://www.amazon.co.jp/iFace-Reflection-iPhone8-%E5%BC%B7%E5%8C%96%E3%82%AC%E3%83%A9%E3%82%B9-%E3%83%99%E3%83%BC%E3%82%B8%E3%83%A5/dp/B07NDHFF78/ref=sr_1_1?qid=1559304499&refinements=p_n_feature_eleven_browse-bin%3A2519089051&s=electronics&sr=1-1',
+  },
+  {
+    id: 3,
+    name: 'iFace Reflection iPhone8/7 ケース クリア 強化ガラス',
+    price: 3456,
+    star_count: 4.0,
+    url: 'https://www.amazon.co.jp/iFace-Reflection-iPhone8-%E5%BC%B7%E5%8C%96%E3%82%AC%E3%83%A9%E3%82%B9-%E3%83%99%E3%83%BC%E3%82%B8%E3%83%A5/dp/B07NDHFF78/ref=sr_1_1?qid=1559304499&refinements=p_n_feature_eleven_browse-bin%3A2519089051&s=electronics&sr=1-1',
+  },
+  {
+    id: 4,
+    name: 'iFace Reflection iPhone8/7 ケース クリア 強化ガラス',
+    price: 3456,
+    star_count: 4.0,
+    url: 'https://www.amazon.co.jp/iFace-Reflection-iPhone8-%E5%BC%B7%E5%8C%96%E3%82%AC%E3%83%A9%E3%82%B9-%E3%83%99%E3%83%BC%E3%82%B8%E3%83%A5/dp/B07NDHFF78/ref=sr_1_1?qid=1559304499&refinements=p_n_feature_eleven_browse-bin%3A2519089051&s=electronics&sr=1-1',
+  }
+].each do |product|
+  unless Product.find_by(id: product[:id])
+    Product.create(product)
+  end
+end
+
+
+
+
+[
+  {
+    id: 1,
+    product_id: 1,
+    url: 'https://images-na.ssl-images-amazon.com/images/I/61LFmakQArL._SY355_.jpg',
+    sort_order: 1
+  },
+  {
+    id: 2,
+    product_id: 1,
+    url: 'https://images-na.ssl-images-amazon.com/images/I/61LFmakQArL._SY355_.jpg',
+    sort_order: 2
+  },
+  {
+    id: 3,
+    product_id: 2,
+    url: 'https://images-na.ssl-images-amazon.com/images/I/61LFmakQArL._SY355_.jpg',
+    sort_order: 1
+  },
+  {
+    id: 4,
+    product_id: 2,
+    url: 'https://images-na.ssl-images-amazon.com/images/I/61LFmakQArL._SY355_.jpg',
+    sort_order: 2
+  },
+  {
+    id: 5,
+    product_id: 3,
+    url: 'https://images-na.ssl-images-amazon.com/images/I/61LFmakQArL._SY355_.jpg',
+    sort_order: 1
+  },
+  {
+    id: 6,
+    product_id: 3,
+    url: 'https://images-na.ssl-images-amazon.com/images/I/61LFmakQArL._SY355_.jpg',
+    sort_order: 2
+  },
+  {
+    id: 7,
+    product_id: 4,
+    url: 'https://images-na.ssl-images-amazon.com/images/I/61LFmakQArL._SY355_.jpg',
+    sort_order: 1
+  },
+  {
+    id: 8,
+    product_id: 4,
+    url: 'https://images-na.ssl-images-amazon.com/images/I/61LFmakQArL._SY355_.jpg',
+    sort_order: 2
+  },
+].each do |product_image|
+  unless ProductImage.find_by(id: product_image[:id])
+    ProductImage.create(product_image)
+  end
+end
+
+
