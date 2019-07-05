@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 20190628124647) do
     t.text     "review",     limit: 65535
     t.float    "star_count", limit: 24
     t.integer  "score"
+    t.string   "title"
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
   end

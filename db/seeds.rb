@@ -158,6 +158,7 @@ iFaceって保証が付いてるから保証を使う事だって出来るはず
 一体このキズ入りのiFaceどうしたら良いのでしょう？',
     star_count: 1.0,
     score: 67,
+    title: '良い買い物でした'
   },
   {
     id: 2,
@@ -169,6 +170,7 @@ iPhone下部のスピーカーの部分はカバーで覆われていますが�
 Qi充電も問題なくできました。',
     star_count: 5.0,
     score: 10,
+    title: '良い買い物でした'
   },
   {
     id: 3,
@@ -178,6 +180,7 @@ Qi充電も問題なくできました。',
 値段も手頃でしたので、リピしたいと思います。',
     star_count: 5.0,
     score: 8,
+    title: '良い買い物でした'
   },
   {
     id: 4,
@@ -198,6 +201,7 @@ iFaceって保証が付いてるから保証を使う事だって出来るはず
 一体このキズ入りのiFaceどうしたら良いのでしょう？',
     star_count: 1.0,
     score: 67,
+    title: '良い買い物でした'
   },
   {
     id: 5,
@@ -218,6 +222,7 @@ iFaceって保証が付いてるから保証を使う事だって出来るはず
 一体このキズ入りのiFaceどうしたら良いのでしょう？',
     star_count: 1.0,
     score: 67,
+    title: '良い買い物でした'
   }
 ].each do |product_review|
   unless ProductReview.find_by(id: product_review[:id])

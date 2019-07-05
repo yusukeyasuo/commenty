@@ -5,6 +5,7 @@ class CreateProductReviews < ActiveRecord::Migration[5.0]
       t.text :review
       t.float :star_count
       t.integer :score
+      t.string :title 
 
       t.timestamps
     end
