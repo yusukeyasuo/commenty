@@ -5,10 +5,8 @@ class HomeController < ApplicationController
   end
   
   def show
-    @products = Product.all
-    pp @products
-    @product_reviews = ProductReviews.all
-    pp @product_reviews
+    @product  = Product.find(params[:id])
+    @product_reviews = @product.product_reviews
   end  
   
   def about
