@@ -1,7 +1,11 @@
 class HomeController < ApplicationController
   def index
-    @products = Product.all
-    pp @products
+    pp params
+    @products = if params[:keyword].present?
+                  Product.search(params[:keyword])
+                else
+                  Product.all
+                end
   end
   
   def show
@@ -11,6 +15,5 @@ class HomeController < ApplicationController
   
   def about
   end
-  
   
 end

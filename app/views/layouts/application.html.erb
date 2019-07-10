@@ -11,65 +11,14 @@
     <script src="https://kit.fontawesome.com/3acdbfcf3b.js"></script>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    
-    
-    
-    
   </head>
-  
   
  
   <body>
     <header>
     <div class="header-wrapper bg-info">
-      <div class="container px-3 py-1">
-       
-        <!-- ver.1.0?
-        <div class="row head-content py-1">
-          <div class="logo">
-            <h4><a href="#" class="font-weight-bold text-white text-left"><span><i class="far fa-comments"></i></span>Commenty!</a></h4>
-          </div>
-        </div>
-        
-        <!--<div class="row head-content float py-1">
-          <div class="search-form input-group col-xs-4  col-sm-4 col-md-4 text-right" href="#">
-          	<button type="button" class="btn btn-default"><span><i class="fas fa-search text-white"></i></span></button>
-            <input type="text" class="form-control" placeholder="What want?">
-          </div>
-        </div>
-        -->
-        
-        <!-- ver.2.0?
-        <nav class="navbar navbar-light bg-info">
-          <a href="#" class="navbar-brand font-weight-bold text-white text-left"><span><i class="far fa-comments"></i></span>Commenty!</a>
-          <form class="form-inline">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn my-2 my-sm-0" type="submit"><span><i class="fas fa-search text-white"></i></span></button>
-            
-            
-            <div class="row head-content text-white float-right　py-1">
-              <button type="button" class="btn btn-info text-white" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"><span><i class="fas fa-bars"></i></span></button>
-              <div class="menu text-white py-1 collapse" id="collapseExample">
-                <ul>
-                  <li>
-                    <a href="#" class="text-white">Login</a>
-                  </li>
-                  <li>
-                    <a href="#" class="text-white">Favorites</a>
-                  </li>
-                  <li>
-                    <a href="#" class="text-white">About us</a>
-                  </li>
-                </ul>
-              </div>
-            </div>    
+      <div class="container px-1 py-1">
 
-            
-          </form>
-        </nav>
-        -->
-
-        
         <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-info">
           <div class="container">
             <a class="navbar-brand text-light" href="#"><span><i class="far fa-comments"></i></span>Commenty</a>
@@ -98,41 +47,19 @@
                   <a class="nav-link disabled text-light" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
                 </li>
               </ul>
-              <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-dark bg-light my-2 my-sm-0" type="submit"><span><i class="fas fa-search"></i></span></button>
-              </form>
+              <%=form_tag(home_index_path, method: :get, class: 'form-inline my-2 my-lg-0') do %>
+                  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="keyword">
+                  <button class="btn btn-outline-dark bg-light  my-sm-0" type="submit"><span><i class="fas fa-search"></i></span></button>
+              <% end %>
+              <!--参考:https://qiita.com/yusuko/items/cff4e46aeafbc3beecf2 -->
             </div>
           </div>  
         </nav>
         
-        
-<!--
-        <div class="row head-content text-white float-right　py-1">
-          <button type="button" class="btn btn-info text-white" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"><span><i class="fas fa-bars"></i></span></button>
-              <div class="menu text-white py-1 collapse" id="collapseExample">
-                <ul>
-                  <li>
-                    <a href="#" class="text-white">Login</a>
-                  </li>
-                  <li>
-                    <a href="#" class="text-white">Favorites</a>
-                  </li>
-                  <li>
-                    <a href="#" class="text-white">About us</a>
-                  </li>
-                </ul>
-              </div>
-        </div>    
--->
-
       </div>
     </div>
     
   </header>
-  
-
-    
     
     <%= yield %>
     
