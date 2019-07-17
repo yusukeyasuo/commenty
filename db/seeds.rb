@@ -230,3 +230,18 @@ iFaceって保証が付いてるから保証を使う事だって出来るはず
   end
 end
 
+
+[
+  {
+    id: 1,
+    user_id: 1,
+    product_id: 1
+  }
+].each do |like|
+  unless Like.find_by(id: product_id[:id])
+    Like.create(like)
+  end
+end
+
+
+

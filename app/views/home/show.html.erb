@@ -37,8 +37,30 @@
     
   </div>
   
+  <!--↓favarite  -->
   <div class="text-center text-warning">
-    <h1><i class="fas fa-heart"></i><i class="far fa-heart"></i></h1>
+    
+    <% if Like.find_by(user_id: @current_user.id , product_id: @product) %>
+      <h1>
+        <%= link_to ("/home/#{@product.id}/like" , {method: "post"}) do %>
+          <span><i class="fas fa-heart"></i></span> <!--create -->
+        <% end %>
+      
+        <%= link_to ("/home/#{@product.id}/unlike" , {method: "post"}) do %>
+          <span><i class="far fa-heart"></i></span> <!--destroy -->
+        <% end %>
+      </h1>
+    <% end %>
+  <!--
+    <%= form_for(Like.find_by(user_id: user.id , product_id: params[:product_id]))%>
+      
+    <% end %>
+    
+    <%= form_for %>
+    
+    <% end %>
+  -->
+    
   </div>
   
 

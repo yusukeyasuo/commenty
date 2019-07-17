@@ -8,12 +8,12 @@ class Product < ApplicationRecord
   end  
   
   def like
-    @like = Like.create(user_id: user.id , product_id: products.id)
+    @like = Like.new(user_id: user.id , product_id: params[:product_id])
     @like.save
   end
   
   def unlike
-    @like = Like.find(user_id: user.id , product_id: product.id)
+    @like = Like.find(user_id: user.id , product_id: params[:product_id])
     @like.destroy
   end  
 
