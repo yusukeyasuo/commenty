@@ -5,4 +5,8 @@ Rails.application.routes.draw do
   post 'home/:product_id/like' => "like#create"
   post 'home/:product_id/unlike' => "like#destroy"
   
+  #likeはhomeに移植したほうがいい？
+  
+  get 'home/:user_id/favorite' => "like#favorite"
+  
 end
