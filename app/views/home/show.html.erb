@@ -34,24 +34,18 @@
 
   <div class="link text-center">
     <a href="<%= @product.url%>"><%= @product.url%></a>
-    
   </div>
   
   <!--↓favarite  -->
   <div class="text-center text-warning">
-    
     <% if Like.find_by(user_id: @current_user.id , product_id: @product) %>
-      
         <%= link_to ("/home/#{@product.id}/unlike" , {method: "post"}) do %>
           <h1><span><i class="far fa-heart"></i></span></h1> <!--destroy -->
         <% end %>
-        
     <% else %>
-    
         <%= link_to ("/home/#{@product.id}/like" , {method: "post"}) do %>
           <h1><span><i class="fas fa-heart"></i></span></h1> <!--create -->
         <% end %>
-        
     <% end %>
   </div>
   

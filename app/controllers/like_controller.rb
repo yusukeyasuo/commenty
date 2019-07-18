@@ -31,7 +31,7 @@ class LikeController < ApplicationController
   
   def favorite
     @like = Like.where(user_id:@current_user.id)
-    @product = Product.find(product_id: @like.product_id)
+    @product = Product.where(product_id: @like.product_id)
   end  
   
   

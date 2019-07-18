@@ -3,14 +3,17 @@
   <div class="row contents-wrapper py-5 px-5">
     <% @products.each do |product|  %>
       <div class="content col-xs-4 col-sm-4 col-md-4 py-5">
-        <div class="product ">
+        <div class="product">
           <p class="text-success"> <%= product.name %>  </p>
           <a href="/home/<%= product.id %>/show"><img src="<%= product.product_images.order(:sort_order).first.url %>" class="img-responsive img-thumbnail img-rounded" alt="pics" width="60%" height="auto"></a>
         </div>
       </div>
     <% end %>
+    <%= paginate @products %>
   </div>
   
+  
+  <!--paganateできたし↓不要？ -->
   <nav aria-label="Page navigation example">
     <ul class="pagination justify-content-center mt-3">
       <li class="page-item disabled">
@@ -23,6 +26,6 @@
         <a class="page-link" href="#">Next</a>
       </li>
     </ul>
-  </nav>    
-    
+  </nav>
+
 </main>
