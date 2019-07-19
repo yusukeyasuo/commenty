@@ -1,14 +1,5 @@
 class LikeController < ApplicationController
-  #quita基準で描いてみた
-  def create
-    @product = Product.find(params[:user_id , :product_id])
-    @product.like　
-  end
-  #ここのlikemethod良くわからん
-  def destroy
-    @product = Product.find(params[:user_id , :product_id ])
-    @product.unlike
-  end  
+
     
 
 
@@ -30,8 +21,8 @@ class LikeController < ApplicationController
   end  
   
   def index
-    likes = Like.where(user_id: @current_user.id)
-    @products = Product.where(product_id: likes.pluck(:product_id))
+    likes = Like.where(user_id: current_user.id)
+    @products = Product.where(id: likes.pluck(:product_id))
   end  
   
   
