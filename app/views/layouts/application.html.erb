@@ -29,7 +29,11 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                  <a class="nav-link text-light" href="#">Login<span class="sr-only">(current)</span></a>
+                  <% if user_signed_in? %>
+                    <%= link_to "Logout", destroy_user_session_path, method: :delete, class: 'nav-link text-light' %>
+                  <% else %>  
+                    <%= link_to "Login",  new_user_session_path, class: 'nav-link text-light' %>
+                  <% end %>  
                 </li>
                 <li class="nav-item">
                   <a class="nav-link text-light" href="#">Favorites</a>
@@ -47,7 +51,7 @@
                   <a class="nav-link disabled text-light" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
                 </li>
               </ul>
-              <%=form_tag(home_index_path, method: :get, class: 'form-inline my-2 my-lg-0') do %>
+              <%=form_tag(root_path, method: :get, class: 'form-inline my-2 my-lg-0') do %>
                   <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="keyword">
                   <button class="btn btn-outline-dark bg-light  my-sm-0" type="submit"><span><i class="fas fa-search"></i></span></button>
               <% end %>

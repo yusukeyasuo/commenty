@@ -1,7 +1,7 @@
 
 
 <main class="px-3 py-1 text-center">
-  <% if Like.find_by(user_id: params[:user_id]) %>
+  <% if Like.find_by(user_id: params[:user_id]) %><!-- -->
     <div class="row contents-wrapper py-5 px-5">
       <% @products.each do |product|  %>
         <div class="content col-xs-4 col-sm-4 col-md-4 py-5">
