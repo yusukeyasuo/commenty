@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(version: 20190710085132) do
     t.integer  "product_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["user_id", "product_id"], name: "index_likes_on_user_id_and_product_id", unique: true, using: :btree
   end
 
   create_table "product_images", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|

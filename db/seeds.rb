@@ -263,7 +263,7 @@ end
     product_id: 2
   }
 ].each do |like|
-  unless Like.find_by(id: product_id[:id])
+  unless Like.find_by(id: like[:id])
     Like.create(like)
   end
 end

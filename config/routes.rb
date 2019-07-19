@@ -7,6 +7,6 @@ Rails.application.routes.draw do
   
   #likeはhomeに移植したほうがいい？
   
-  get 'home/:user_id/favorite' => "like#favorite"
+  get 'like' => "like#index"
   
 end

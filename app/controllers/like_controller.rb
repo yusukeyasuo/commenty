@@ -29,9 +29,9 @@ class LikeController < ApplicationController
     redirect_to("/home/#{params[:product_id]}/show")
   end  
   
-  def favorite
-    @like = Like.where(user_id:@current_user.id)
-    @product = Product.where(product_id: @like.product_id)
+  def index
+    likes = Like.where(user_id: @current_user.id)
+    @products = Product.where(product_id: likes.pluck(:product_id))
   end  
   
   

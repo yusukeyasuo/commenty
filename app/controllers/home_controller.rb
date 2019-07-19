@@ -12,6 +12,7 @@ class HomeController < ApplicationController
     @product  = Product.find(params[:id])
     @product_reviews = @product.product_reviews
   end  
-
+  
+  
 
 end
