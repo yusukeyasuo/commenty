@@ -13,7 +13,7 @@
       <li class="page-item"><%= prev_page_tag unless current_page.first? %></li>
       <% each_page do |page| -%>
         <% if page.left_outer? || page.right_outer? || page.inside_window? -%>
-          <%= page_tag page %>
+          <li class="page-item"><%= page_tag page %></li>
         <% elsif !page.was_truncated? -%>
           <%= gap_tag %>
         <% end -%>
