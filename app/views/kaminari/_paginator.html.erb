@@ -1,0 +1,36 @@
+<%# The container tag
+  - available local variables
+    current_page:  a page object for the currently displayed page
+    total_pages:   total number of pages
+    per_page:      number of items to fetch per page
+    remote:        data-remote
+    paginator:     the paginator that renders the pagination tags inside
+-%>
+<%= paginator.render do -%>
+  <nav class="pagination">
+    <ul class="pagination mx-auto">
+      <li class="page-item"><%= prev_page_tag unless current_page.first? %></li>
+      <li class="page-item disabled"><%= prev_page_tag if current_page.first? %></li>
+      <% each_page do |page| -%>
+        <% if page.left_outer? || page.right_outer? || page.inside_window? -%>
+          <li class="page-item"><%= page_tag page unless page.current? %></li>
+          <li class="page-item active"><%= page_tag page if page.current? %></li>
+        <% elsif !page.was_truncated? -%>
+          <%= gap_tag %>
+        <% end -%>
+      <% end -%>
+      <li class="page-item"><%= next_page_tag unless current_page.last? %></li>
+      <li class="page-item disabled"><%= next_page_tag if current_page.last? %></li>
+    </ul>
+  </nav>
+<% end -%>
+
+<!--<nav aria-label="Page navigation example">-->
+<!--  <ul class="pagination">-->
+<!--    <li class="page-item"><a class="page-link" href="#">Previous</a></li>-->
+<!--    <li class="page-item"><a class="page-link" href="#">1</a></li>-->
+<!--    <li class="page-item"><a class="page-link" href="#">2</a></li>-->
+<!--    <li class="page-item"><a class="page-link" href="#">3</a></li>-->
+<!--    <li class="page-item"><a class="page-link" href="#">Next</a></li>-->
+<!--  </ul>-->
+<!--</nav>-->

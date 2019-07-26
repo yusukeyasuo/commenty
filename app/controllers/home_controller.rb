@@ -3,7 +3,7 @@ class HomeController < ApplicationController
     @products = if params[:keyword].present?
                   Product.search(params[:keyword]).page(params[:page]).per(9)
                 else
-                  Product.page(params[:page]).per(9)
+                  Product.page(params[:page]).per(2)
                 end
   end
   
