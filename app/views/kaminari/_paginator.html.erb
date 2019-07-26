@@ -8,7 +8,7 @@
 -%>
 <%= paginator.render do -%>
   <nav class="pagination">
-    <ul class="pagination">
+    <ul class="pagination mx-auto">
       <li class="page-item"><%= prev_page_tag unless current_page.first? %></li>
       <li class="page-item disabled"><%= prev_page_tag if current_page.first? %></li>
       <% each_page do |page| -%>
