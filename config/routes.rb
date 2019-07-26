@@ -3,8 +3,10 @@ Rails.application.routes.draw do
   root to: 'home#index'
   get 'home/:id/show' => "home#show"
   
-  post 'home/:product_id/like' => "like#create"
-  post 'home/:product_id/unlike' => "like#destroy"
+  post 'like/:product_id/create' => "like#create"
+  post 'like/:product_id/destroy' => "like#destroy"
+  
+  
   
 
   get 'like' => "like#index"

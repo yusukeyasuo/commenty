@@ -38,13 +38,13 @@
   
   <!--↓favarite  -->
   <div class="text-center text-warning">
-    <% if Like.find_by(user_id: @current_user.id , product_id: @product) %>
-        <%= link_to("/home/#{@product.id}/unlike" , {method: "post"}) do %>
-          <h1><span><i class="far fa-heart"></i></span></h1> <!--destroy -->
+    <% if @likes.present? %>
+        <%= link_to("/like/#{@product.id}/destroy" , {method: "post"}) do %>
+          <h1><span><i class="far fa-heart"></i></span></h1> 
         <% end %>
     <% else %>
-        <%= link_to("/home/#{@product.id}/like" , {method: "post"}) do %>
-          <h1><span><i class="fas fa-heart"></i></span></h1> <!--create -->
+        <%= link_to("/like/#{@product.id}/create" , {method: "post"}) do %>
+          <h1><span><i class="fas fa-heart"></i></span></h1>
         <% end %>
     <% end %>
   </div>
