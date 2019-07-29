@@ -10,6 +10,7 @@ class HomeController < ApplicationController
   def show
     @product  = Product.find(params[:id])
     @product_reviews = @product.product_reviews
+    @likes = Like.where(user_id: current_user.id)
   end  
   
   

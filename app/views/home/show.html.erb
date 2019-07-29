@@ -1,5 +1,3 @@
-<!-- sourced by https://getbootstrap.com/docs/4.3/components/carousel/  -->
-
 <div class="py-5 px-5">
   <div class="row">
     <div>
@@ -38,17 +36,26 @@
   
   <!--↓favarite  -->
   <div class="text-center text-warning">
-    <% if @likes.present? %>
+    <% if %>  <!--user session あったら -->
+      <% if @likes.present? %>
         <%= link_to("/like/#{@product.id}/destroy" , {method: "post"}) do %>
-          <h1><span><i class="far fa-heart"></i></span></h1> 
+          <h1><span><i class="fas fa-heart"></i></span></h1> 
         <% end %>
-    <% else %>
+      <% else %>
         <%= link_to("/like/#{@product.id}/create" , {method: "post"}) do %>
-          <h1><span><i class="fas fa-heart"></i></span></h1>
+          <h1><span><i class="far fa-heart"></i></span></h1>
         <% end %>
-    <% end %>
+      <% end %>
+    <% else %> <!-- user sessionなかったら-->
+      <%= link_to("/like/#{@product.id}/create" , {method: "post"}) do %>
+        <h1><span><i class="far fa-heart"></i></span></h1>
+      <% end %>
+    <% end %>  
+
+    
+    
+    
   </div>
-  
 
   <div class="comments">
     <% @product_reviews.each do |product_review| %>
@@ -61,8 +68,5 @@
       </div>
     <% end %>
   </div>
-  
-  
-  
-  
+
 </div>

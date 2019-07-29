@@ -1,11 +1,10 @@
-class LikeController < ApplicationControlle
+class LikeController < ApplicationController
 
   def create
     @like = Like.new(user_id: current_user.id , product_id: params[:product_id])
     @like.save
     flash[:notice] = "Like it!"
     redirect_to("/home/#{params[:product_id]}/show")
-  
   end
   
   def destroy
@@ -17,8 +16,9 @@ class LikeController < ApplicationControlle
   
   def index
     @likes = Like.where(user_id: current_user.id)
-    @products = Product.where(id: @likes.pluck(:product_id) )
-  end  
+    @products = Product.where(id: @likes.pluck(:product_id) ).page(params[:page]).per(9)
+    
+  end
   
   
   
