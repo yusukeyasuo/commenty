@@ -34,9 +34,8 @@
     <a href="<%= @product.url%>"><%= @product.url%></a>
   </div>
   
-  <!--↓favarite  -->
   <div class="text-center text-warning">
-    <% if %>  <!--user session あったら -->
+    <% if user_signed_in? %>
       <% if @likes.present? %>
         <%= link_to("/like/#{@product.id}/destroy" , {method: "post"}) do %>
           <h1><span><i class="fas fa-heart"></i></span></h1> 
@@ -46,15 +45,12 @@
           <h1><span><i class="far fa-heart"></i></span></h1>
         <% end %>
       <% end %>
-    <% else %> <!-- user sessionなかったら-->
+    <% else %>
       <%= link_to("/like/#{@product.id}/create" , {method: "post"}) do %>
+        <p>flash[:notice]= "Please Signin or Create Account."</p>
         <h1><span><i class="far fa-heart"></i></span></h1>
       <% end %>
     <% end %>  
-
-    
-    
-    
   </div>
 
   <div class="comments">
