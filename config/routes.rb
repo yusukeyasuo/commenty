@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   
   
   
+  
 
   get 'like' => "like#index"
   

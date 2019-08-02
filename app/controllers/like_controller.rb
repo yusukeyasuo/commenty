@@ -1,23 +1,25 @@
 class LikeController < ApplicationController
 
+
   def create
-    @like = if user_signed_in?
-              Like.new(user_id: current_user.id , product_id: params[:product_id])
-              @like.save
-              flash[:create] = "Like it!"
-              redirect_to("/home/#{params[:product_id]}/show")
-            else   
-            end
+   unless user_signed_in?
+     flash[:error] = "ログインしてください"
+     render "/home/#{params[:product_id]}/show" and return
+   end
+   @like = Like.new(user_id: current_user.id , product_id: params[:product_id])
+   @like.save
+   flash[:create] = "Like it!"
+   redirect_to("/home/#{params[:product_id]}/show")
   end
+  
   
   def destroy
     @like = if user_signed_in?
-              Like.find(user_id: current_user.id , product_id: params[:product_id])
-              @like.destroy
-              flash[:destroy] = "Don't like..."
-              redirect_to("/home/#{params[:product_id]}/show")
-            else
-            end  
+              Like.find_by(user_id: current_user.id , product_id: params[:product_id])
+            end
+    @like.destroy
+    flash[:destroy] = "Don't like..."
+    redirect_to("/home/#{params[:product_id]}/show")
   end  
   
   def index

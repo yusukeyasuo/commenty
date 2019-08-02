@@ -48,7 +48,7 @@
         <% end %>
       <% end %>
     <% else %>
-      <%= link_to("/home/#{params[:product_id]}/show") do %> <!--←こいつ要らんのでは？ -->
+      <%= link_to("/home/#{params[:product_id]}/show") do %>
         <%= flash[:not] %>
         <h1><span><i class="far fa-heart"></i></span></h1>
       <% end %>
