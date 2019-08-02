@@ -38,16 +38,18 @@
     <% if user_signed_in? %>
       <% if @likes.present? %>
         <%= link_to("/like/#{@product.id}/destroy" , {method: "post"}) do %>
-          <h1><span><i class="fas fa-heart"></i></span></h1> 
+          <h1><span><i class="fas fa-heart"></i></span></h1>
+          <%= flash[:destroy] %>
         <% end %>
       <% else %>
         <%= link_to("/like/#{@product.id}/create" , {method: "post"}) do %>
           <h1><span><i class="far fa-heart"></i></span></h1>
+          <%= flash[:create] %>
         <% end %>
       <% end %>
     <% else %>
-      <%= link_to("/like/#{@product.id}/create" , {method: "post"}) do %>
-        <p>flash[:notice]= "Please Signin or Create Account."</p>
+      <%= link_to("/home/#{params[:product_id]}/show") do %> <!--←こいつ要らんのでは？ -->
+        <%= flash[:not] %>
         <h1><span><i class="far fa-heart"></i></span></h1>
       <% end %>
     <% end %>  

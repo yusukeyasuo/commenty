@@ -1,7 +1,7 @@
 class HomeController < ApplicationController
   def index
     @products = if params[:keyword].present?
-                  Product.search(params[:keyword]).page(params[:page]).per(9)
+                  Product.search(params[:keyword]).page(params[:page]).per(2)
                 else
                   Product.page(params[:page]).per(2)
                 end
