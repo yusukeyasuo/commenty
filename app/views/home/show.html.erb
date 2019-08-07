@@ -47,11 +47,6 @@
           <%= flash[:create] %>
         <% end %>
       <% end %>
-    <% else %>
-      <%= link_to("/home/#{params[:product_id]}/show") do %>
-        <%= flash[:not] %>
-        <h1><span><i class="far fa-heart"></i></span></h1>
-      <% end %>
     <% end %>  
   </div>
 
@@ -59,7 +54,12 @@
     <% @product_reviews.each do |product_review| %>
       <div>
         <h5 class="mt-0">Review heading</h5>
+        
         <div class="star-rating">
+          <script>
+            
+            
+          </script>
           <%= product_review.star_count %>
         </div>
         <p><%= product_review.review %></p>

@@ -55,3 +55,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'kaminari', '~> 0.17.0'
 
 gem 'devise'
+
+gem 'jquery-rails'

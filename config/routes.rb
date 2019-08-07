@@ -5,10 +5,6 @@ Rails.application.routes.draw do
   
   post 'like/:product_id/create' => "like#create"
   post 'like/:product_id/destroy' => "like#destroy"
-  
-  
-  
-  
 
   get 'like' => "like#index"
   
