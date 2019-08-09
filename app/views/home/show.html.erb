@@ -14,7 +14,7 @@
         <div class="carousel-inner text-center">
           <% @product.product_images.each_with_index do |image, index| %>  
             <div class="carousel-item <%= (index == 0) ? 'active' : '' %>">
-              <img src="<%= image.url %>" class="d-block pictureres" alt="pics">
+              <img src="<%= image.url %>" class="d-block pics-show" alt="pics">
             </div>
           <% end %> 
         </div>
