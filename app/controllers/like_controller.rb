@@ -4,14 +4,22 @@ class LikeController < ApplicationController
    @like = Like.new(user_id: current_user.id , product_id: params[:product_id])
    @like.save
    flash[:create] = "Like it!"
-   redirect_to("/home/#{params[:product_id]}/show")
+   @product = Product.find(params[:product_id])
+    respond_to do |format|
+        format.html { redirect_to request.referrer || root_url }
+        format.js
+    end
   end
   
   def destroy
    @like = Like.find_by(user_id: current_user.id , product_id: params[:product_id])
    @like.destroy
    flash[:destroy] = "Don't like it..."
-   redirect_to("/home/#{params[:product_id]}/show")
+   @product = Product.find(params[:product_id])
+    respond_to do |format|
+        format.html { redirect_to request.referrer || root_url }
+        format.js
+    end
   end
   
 
