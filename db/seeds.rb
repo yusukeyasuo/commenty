@@ -41,13 +41,13 @@ end
   {
     id: 1,
     product_id: 1,
-    url: 'https://images-na.ssl-images-amazon.com/images/I/61LFmakQArL._SY355_.jpg',
+    url: 'https://image.rakuten.co.jp/htdd/cabinet/gold10/gz144-01.jpg',
     sort_order: 1
   },
   {
     id: 2,
     product_id: 1,
-    url: 'https://image.rakuten.co.jp/htdd/cabinet/gold10/gz144-01.jpg',
+    url: 'https://images-na.ssl-images-amazon.com/images/I/61LFmakQArL._SY355_.jpg',
     sort_order: 2
   },
   {

@@ -1,0 +1,15 @@
+  <div class="text-center text-warning like">
+    <% if user_signed_in? %>
+      <% if product.likes.find_by(user: current_user).present? %>
+        <%= link_to("/like/#{product.id}/destroy" , {method: "post"}) do %>
+          <h1><span><i class="fas fa-heart"></i></span></h1>
+          <%= flash[:destroy] %>
+        <% end %>
+      <% else %>
+        <%= link_to("/like/#{product.id}/create" , {method: "post"}) do %>
+          <h1><span><i class="far fa-heart"></i></span></h1>
+          <%= flash[:create] %>
+        <% end %>
+      <% end %>
+    <% end %>  
+  </div>

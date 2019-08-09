@@ -1,6 +1,6 @@
 class LikeController < ApplicationController
 
-  def create #4-8行目の挙動を非同期Ajax化したい
+  def create 
    @like = Like.new(user_id: current_user.id , product_id: params[:product_id])
    @like.save
    flash[:create] = "Like it!"

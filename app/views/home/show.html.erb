@@ -34,21 +34,7 @@
     <a href="<%= @product.url%>"><%= @product.url%></a>
   </div>
   
-  <div class="text-center text-warning">
-    <% if user_signed_in? %>
-      <% if @likes.present? %>
-        <%= link_to("/like/#{@product.id}/destroy" , {method: "post"}) do %>
-          <h1><span><i class="fas fa-heart"></i></span></h1>
-          <%= flash[:destroy] %>
-        <% end %>
-      <% else %>
-        <%= link_to("/like/#{@product.id}/create" , {method: "post"}) do %>
-          <h1><span><i class="far fa-heart"></i></span></h1>
-          <%= flash[:create] %>
-        <% end %>
-      <% end %>
-    <% end %>  
-  </div>
+  <%= render "like/like", product: @product %>
 
   <div class="comments">
     <% @product_reviews.each do |product_review| %>

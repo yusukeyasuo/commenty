@@ -9,12 +9,12 @@
 .pics-index{
   height:250px;
   width:250px;
-  
+  object-fit: cover; 
 }
 
 .pics-show {
   height :355px;
-  width :355px;
-  
+  width :auto;
+
 }
 
