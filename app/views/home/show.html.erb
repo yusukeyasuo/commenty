@@ -2,7 +2,7 @@
   <div class="row">
     <div>
       <h2><%= @product.name %></h2>
-      <h2><%= @product.price%></h2>
+      <h2>¥<%= @product.price%>-</h2>
     </div>
     <div class="bd-example col-xs-12 col-sm-12 col-md-12 py-5 d-flex justify-content-center py-5">
       <div id="carouselExampleCaptions" class="carousel slide mx-auto " data-ride="carousel">
@@ -53,14 +53,30 @@
   <div class="comments">
     <% @product_reviews.each do |product_review| %>
       <div>
-        <h5 class="mt-0">Review heading</h5>
-        
+        <h5 class="mt-0"><%= product_review.title %></h5>
         <div class="star-rating">
-          <script>
-            
-            
-          </script>
-          <%= product_review.star_count %>
+          <div id="star"><%= product_review.star_count %></div>
+            <% if product_review.star_count == 5.0 %>
+              <%= image_tag 'star-on.png'%><%= image_tag 'star-on.png'%><%= image_tag 'star-on.png'%><%= image_tag 'star-on.png'%><%= image_tag 'star-on.png'%>
+            <% elsif product_review.star_count < 5.0 && product_review.star_count >= 4.5 %>
+              <%= image_tag 'star-on.png'%><%= image_tag 'star-on.png'%><%= image_tag 'star-on.png'%><%= image_tag 'star-on.png'%><%= image_tag 'star-half.png'%>
+            <% elsif product_review.star_count < 4.5 && product_review.star_count >= 4.0 %>
+              <%= image_tag 'star-on.png'%><%= image_tag 'star-on.png'%><%= image_tag 'star-on.png'%><%= image_tag 'star-on.png'%><%= image_tag 'star-off.png'%>
+            <% elsif product_review.star_count < 4.0 && product_review.star_count >= 3.5 %>
+              <%= image_tag 'star-on.png'%><%= image_tag 'star-on.png'%><%= image_tag 'star-on.png'%><%= image_tag 'star-half.png'%><%= image_tag 'star-off.png'%>
+            <% elsif product_review.star_count < 3.5 && product_review.star_count >= 3.0 %>
+              <%= image_tag 'star-on.png'%><%= image_tag 'star-on.png'%><%= image_tag 'star-on.png'%><%= image_tag 'star-off.png'%><%= image_tag 'star-off.png'%>
+            <% elsif product_review.star_count < 3.0 && product_review.star_count >= 2.5 %>
+              <%= image_tag 'star-on.png'%><%= image_tag 'star-on.png'%><%= image_tag 'star-half.png'%><%= image_tag 'star-off.png'%><%= image_tag 'star-off.png'%>
+            <% elsif product_review.star_count < 2.5 && product_review.star_count >= 2.0 %>
+              <%= image_tag 'star-on.png'%><%= image_tag 'star-on.png'%><%= image_tag 'star-off.png'%><%= image_tag 'star-off.png'%><%= image_tag 'star-off.png'%>
+            <% elsif product_review.star_count < 2.0 && product_review.star_count >= 1.5 %>
+              <%= image_tag 'star-on.png'%><%= image_tag 'star-half.png'%><%= image_tag 'star-off.png'%><%= image_tag 'star-off.png'%><%= image_tag 'star-off.png'%>
+            <% elsif product_review.star_count < 1.5 && product_review.star_count >= 1.0 %>
+              <%= image_tag 'star-on.png'%><%= image_tag 'star-off.png'%><%= image_tag 'star-off.png'%><%= image_tag 'star-off.png'%><%= image_tag 'star-off.png'%>
+            <% else product_review.star_count < 1.0 && product_review.star_count >= 0 %>
+              <%= image_tag 'star-half.png'%><%= image_tag 'star-off.png'%><%= image_tag 'star-off.png'%><%= image_tag 'star-off.png'%><%= image_tag 'star-off.png'%>
+            <% end %>
         </div>
         <p><%= product_review.review %></p>
       </div>

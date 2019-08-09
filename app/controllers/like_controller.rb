@@ -21,6 +21,5 @@ class LikeController < ApplicationController
   end  
   
   
-  
-  
+
 end  
