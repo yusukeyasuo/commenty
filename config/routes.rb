@@ -8,4 +8,5 @@ Rails.application.routes.draw do
 
   get 'like' => "like#index"
   
+  get 'kuchikomi' => "home#kuchikomi"
 end
