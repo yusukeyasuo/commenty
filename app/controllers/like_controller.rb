@@ -25,7 +25,7 @@ class LikeController < ApplicationController
 
   def index
     @likes = Like.where(user_id: current_user.id)
-    @products = Product.where(id: @likes.pluck(:product_id) ).page(params[:page]).per(2)
+    @products = Product.where(id: @likes.pluck(:product_id) ).page(params[:page]).per(6)
   end  
   
   

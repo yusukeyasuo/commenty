@@ -27,6 +27,48 @@
     price: 3456,
     star_count: 4.0,
     url: 'https://www.amazon.co.jp/iFace-Reflection-iPhone8-%E5%BC%B7%E5%8C%96%E3%82%AC%E3%83%A9%E3%82%B9-%E3%83%99%E3%83%BC%E3%82%B8%E3%83%A5/dp/B07NDHFF78/ref=sr_1_1?qid=1559304499&refinements=p_n_feature_eleven_browse-bin%3A2519089051&s=electronics&sr=1-1',
+  },
+  {
+    id: 5,
+    name: 'ATUSIDUN(アトストン）iPhone ケース リング 滑り防止 耐衝撃 iPhone XR ローズゴールド',
+    price: 1399,
+    star_count: 4.0,
+    url: 'https://images-na.ssl-images-amazon.com/images/I/61NbS3AZE6L._SX425_.jpg',
+  },
+  {
+    id: 6,
+    name: '【iPhone8/7/6s/6 ケース】IIII fit (ピンク)',
+    price: 2728,
+    star_count: 4.0,
+    url: 'https://unicase.jp/goods_image/003/750/37505_o.jpg',
+  },
+  {
+    id: 7,
+    name: 'i【ROOT CO.】iPhone XS Max 耐衝撃 iPhone ケース Gravity Shock Resist Case Pro. (イエロー/グロス)',
+    price: 4950,
+    star_count: 4.5,
+    url: 'https://images-na.ssl-images-amazon.com/images/I/61YVQCNIn8L._SY679_.jpg',
+  },
+  {
+    id: 8,
+    name: 'iFace Reflection iPhone8/7 ケース クリア 強化ガラス',
+    price: 4400,
+    star_count: 4.5,
+    url: 'https://images-na.ssl-images-amazon.com/images/I/61tS1AA8GrL._SY679_.jpg',
+  },
+  {
+    id: 9,
+    name: '送料/関税込【Pornhub】 iPhone ケース',
+    price: 5300,
+    star_count: 0,
+    url: 'https://static-buyma-com.akamaized.net/imgdata/item/190125/0041083078/179925431/428.jpg'
+  },  
+  {
+    id: 10,
+    name: 'iPhone 11 ケース Otter + Pop SYMMETRY LOLLIPOP iPhone 11【12月上旬】',
+    price: 3456,
+    star_count: 4.0,
+    url: 'https://img.appbankstore.jp/article/wp-content/uploads/2019/07/pdintrd_4580395341200-000004.jpg',
   }
 ].each do |product|
   unless Product.find_by(id: product[:id])
