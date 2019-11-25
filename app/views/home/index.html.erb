@@ -5,7 +5,7 @@
       <div class="content col-xs-4 col-sm-4 col-md-4 py-5">
         <div class="product">
           <p class="text-success"> <%= product.name %>  </p>
-          <a href="/home/<%= product.id %>/show"><img src="<%= product.product_images.order(:sort_order).first.url %>" class="img-responsive img-thumbnail img-rounded pics-index" alt="pics" width="60%" height="auto"></a>
+          <a href="/home/<%= product.id %>/show"><img src="<%= product.product_images.order(:sort_order).first %>" class="img-responsive img-thumbnail img-rounded pics-index" alt="pics" width="60%" height="auto"></a>
         </div>
       </div>
     <% end %>
