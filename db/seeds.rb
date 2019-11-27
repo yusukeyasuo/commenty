@@ -36,10 +36,10 @@
   },
   {
     id: 6,
-    name: 'iPhone XRケース シリコン かわいい ストラップホール 花柄 バラ 3D浮き彫り ディズニー キャラクター TPU 軽薄 衝撃吸収 女 携帯カバー iPhoneケース 6.1インチ (iPhone XR 6.1インチ, バラ1)',
-    price: 999,
-    star_count: 4.5,
-    url: 'https://www.amazon.co.jp/iPhone-%E3%82%B9%E3%83%88%E3%83%A9%E3%83%83%E3%83%97%E3%83%9B%E3%83%BC%E3%83%AB-3D%E6%B5%AE%E3%81%8D%E5%BD%AB%E3%82%8A-%E3%82%AD%E3%83%A3%E3%83%A9%E3%82%AF%E3%82%BF%E3%83%BC-iPhone%E3%82%B1%E3%83%BC%E3%82%B9/dp/B07J5PRTCL',
+    name: 'iPhone X/XS ケース Sinjimoru アイフォンX/XS ケース カードケース カード収納ができる アイフォンケース suica pasmo 定期入れ. Sinjimoru Pouch Case, ブラック',
+    price: 1280,
+    star_count: 4.0,
+    url: 'https://www.amazon.co.jp/iPhone-Sinjimoru-%E3%82%A2%E3%82%A4%E3%83%95%E3%82%A9%E3%83%B3X-%E3%82%AB%E3%83%BC%E3%83%89%E5%8F%8E%E7%B4%8D%E3%81%8C%E3%81%A7%E3%81%8D%E3%82%8B-%E3%82%A2%E3%82%A4%E3%83%95%E3%82%A9%E3%83%B3%E3%82%B1%E3%83%BC%E3%82%B9/dp/B079FMJQL9',
   },
   {
     id: 7,
@@ -148,13 +148,13 @@ end
   {
     id: 12,
     product_id: 6,
-    url: 'hhttps://images-na.ssl-images-amazon.com/images/I/61y2aWU0TQL._AC_SL1000_.jpg',
+    url: 'https://images-na.ssl-images-amazon.com/images/I/61reClgmm8L._AC_SL1000_.jpg',
     sort_order: 1
   },
    {
     id: 13,
     product_id: 6,
-    url: 'https://images-na.ssl-images-amazon.com/images/I/6192Eyfo57L._AC_SL1000_.jpg',
+    url: 'https://images-na.ssl-images-amazon.com/images/I/51BZMRUNLkL._AC_SL1000_.jpg',
     sort_order: 2
   },
   {
@@ -315,10 +315,21 @@ iFaceって保証が付いてるから保証を使う事だって出来るはず
    {
     id: 8,
     product_id: 6,
-    review: 'ずっとiFaceを使っていたのですが大きいしただでさえ重い8plusがさらに重くなりかさばるので薄めの花柄がないかと探していたところ見つけました。柄も大好きな薔薇で気に入っています。衝撃には強そうに見えないけど薄くて持ちやすくていいです。',
-    star_count: 5.0,
-    score: 0,
-    title: '薄くて持ちやすい'
+    review: 'ナナコカードを使ってますが入れたまま[ピッ！]って出来ます。
+とても軽く、ポケットは柔らかく、入れやすいけど破けないかが不安です。
+Apple Payに対応していないカードに便利だと思う。
+思ったより滑るのが残念ですが使い勝手は良いと思います。',
+    star_count: 4.0,
+    score: 3,
+    title: '軽くて使いやすい'
+  },
+   {
+    id: 17,
+    product_id: 6,
+    review: '心配だった裏のゴム素材もクオリティーが高そうで、高級感はあり。あとパスモが心配でしたが磁気シートを使うことで解決。カードの保持力もあるので、あとはどれくらいの耐久性があるかですね。',
+    star_count: 4.0,
+    score: 1,
+    title: '製品クオリティーは高いです。'
   },
    {
     id: 9,
