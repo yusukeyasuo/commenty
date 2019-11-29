@@ -1,24 +1,11 @@
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+<名前>
+Commenty
+https://github.com/kentony/commenty
+<コンセプト>
+大手ECサイトで取得した情報を整形し、一覧で閲覧、販売元へ移行可能なキュレーションサイトです。
+<作成したきっかけ >
+こういったがサービスあったらいいな、と感じていたので自身で作成しました。
+<重視している点>
+一覧画面で画像を表示し、一目でどんな商品かわかりやすくしている点。
+<取り入れた技術>
+Railsを用いて作成。devise、kaminariを導入しログインセッションや新規ユーザー登録、ページネーションを取り入れ実在のサービスに近づけました。
