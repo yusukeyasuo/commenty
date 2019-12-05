@@ -49,6 +49,8 @@ test:
 #
 production:
   <<: *default
+  adapter: postgresql
   database: commenty_production
   username: commenty
-  password: <%= ENV['COMMENTY_DATABASE_PASSWORD'] %>
+  password: p@ssw0rd
+  host: localhost

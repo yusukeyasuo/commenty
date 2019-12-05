@@ -52,22 +52,6 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-#pagenation ページネーション
-gem 'kaminari', '~> 0.17.0'
-# Login ログイン
-gem 'devise'
-#jquery
-gem 'jquery-rails'
-# 画像アップ用
-gem 'carrierwave'
-
-
-
-#以下heraku導入用
-group :development, :test do
-  gem 'sqlite3' #do ~ end内部に追加。他のgemは残してください。
-end
-
 group :production do
-  gem 'pg'
+  gem 'postgresql'
 end
